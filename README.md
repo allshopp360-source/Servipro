@@ -25,13 +25,13 @@
     background: var(--primary);
     padding: 0 5%;
     display: flex; align-items: center; justify-content: space-between;
-    height: 68px; position: sticky; top: 0; z-index: 200;
+    height: 68px; position: sticky; top: 0; z-index: 100;
     box-shadow: 0 2px 16px rgba(10,36,99,0.18);
   }
-  .nav-logo { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: #fff; letter-spacing: -0.5px; cursor:pointer; }
+  .nav-logo { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
   .nav-logo span { color: var(--gold); }
   .nav-links { display: flex; gap: 2rem; }
-  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.92rem; font-weight: 500; transition: color .2s; cursor:pointer; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.92rem; font-weight: 500; transition: color .2s; }
   .nav-links a:hover { color: var(--gold); }
   .nav-cta { background: var(--accent); color: #fff; border: none; padding: 10px 22px; border-radius: 8px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: background .2s; }
   .nav-cta:hover { background: #c0303b; }
@@ -62,10 +62,6 @@
   .stat { text-align: center; }
   .stat-num { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: var(--gold); }
   .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
-
-  /* PAGES */
-  .page { display: none; }
-  .page.active { display: block; }
 
   section { padding: 70px 5%; }
   .section-title { font-family: 'Sora', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--primary); text-align: center; margin-bottom: 8px; }
@@ -108,204 +104,6 @@
   .footer p { color: rgba(255,255,255,0.5); font-size: 0.82rem; }
   .footer a { color: var(--gold); text-decoration: none; }
 
-  /* ===================== PROVIDER LISTING PAGE ===================== */
-  .provider-page { background: var(--light); min-height: 100vh; }
-  .provider-header {
-    background: linear-gradient(135deg, var(--primary), #1a3a7c);
-    padding: 36px 5% 32px;
-    color: #fff;
-  }
-  .provider-header .back-btn {
-    background: rgba(255,255,255,0.15); border: none; color: #fff;
-    padding: 8px 16px; border-radius: 8px; cursor: pointer;
-    font-family: 'Sora', sans-serif; font-size: 0.85rem; font-weight: 600;
-    display: inline-flex; align-items: center; gap: 6px; margin-bottom: 18px;
-    transition: background .2s;
-  }
-  .provider-header .back-btn:hover { background: rgba(255,255,255,0.25); }
-  .provider-header h2 { font-family: 'Sora', sans-serif; font-size: 1.7rem; font-weight: 800; margin-bottom: 6px; }
-  .provider-header p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
-
-  .provider-filters {
-    padding: 20px 5%;
-    background: var(--white);
-    display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
-    border-bottom: 1px solid var(--border);
-  }
-  .filter-label { font-size: 0.82rem; font-weight: 600; color: var(--gray); }
-  .filter-btn {
-    padding: 7px 16px; border-radius: 20px; border: 2px solid var(--border);
-    background: var(--white); font-family: 'Sora', sans-serif; font-size: 0.8rem;
-    font-weight: 600; cursor: pointer; transition: all .2s; color: var(--dark);
-  }
-  .filter-btn.active, .filter-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
-
-  .providers-grid { padding: 30px 5%; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
-
-  .provider-card {
-    background: var(--white); border-radius: 16px; overflow: hidden;
-    box-shadow: var(--card-shadow); transition: all .25s; border: 2px solid transparent;
-  }
-  .provider-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(10,36,99,0.15); border-color: var(--primary); }
-  .provider-card-img {
-    height: 160px; background: linear-gradient(135deg, #1a3a7c, #0d1b4a);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 4rem; position: relative;
-  }
-  .provider-badge-verified {
-    position: absolute; top: 12px; right: 12px;
-    background: var(--success); color: #fff; font-size: 0.7rem; font-weight: 700;
-    padding: 4px 10px; border-radius: 20px; font-family: 'Sora', sans-serif;
-  }
-  .provider-badge-accessible {
-    position: absolute; top: 12px; left: 12px;
-    background: #7C3AED; color: #fff; font-size: 0.7rem; font-weight: 700;
-    padding: 4px 10px; border-radius: 20px; font-family: 'Sora', sans-serif;
-  }
-  .provider-card-body { padding: 20px; }
-  .provider-card-body h3 { font-family: 'Sora', sans-serif; font-size: 1rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
-  .provider-meta { font-size: 0.8rem; color: var(--gray); margin-bottom: 10px; }
-  .stars-row { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
-  .stars { color: #F59E0B; font-size: 1rem; letter-spacing: 1px; }
-  .stars-count { font-size: 0.8rem; color: var(--gray); }
-  .provider-vehicles { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
-  .vehicle-tag { background: #EEF2FF; color: var(--primary); font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
-  .vehicle-tag.accessible { background: #F3E8FF; color: #7C3AED; }
-  .provider-price { font-size: 0.85rem; color: var(--gray); margin-bottom: 14px; }
-  .provider-price strong { color: var(--dark); }
-  .provider-card-actions { display: flex; gap: 8px; }
-  .btn-ver-perfil { flex: 1; background: var(--primary); color: #fff; border: none; padding: 10px; border-radius: 8px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: background .2s; }
-  .btn-ver-perfil:hover { background: #0d1e4f; }
-  .btn-wa-small { background: #25D366; color: #fff; border: none; padding: 10px 14px; border-radius: 8px; cursor: pointer; transition: background .2s; font-size: 1rem; }
-  .btn-wa-small:hover { background: #1ebe5a; }
-
-  /* ===================== PROVIDER DETAIL PAGE ===================== */
-  .detail-header {
-    background: linear-gradient(135deg, var(--primary), #1a3a7c);
-    padding: 36px 5% 40px; color: #fff;
-  }
-  .detail-company-info { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 16px; }
-  .detail-company-avatar { width: 80px; height: 80px; background: rgba(255,255,255,0.15); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; border: 2px solid rgba(255,255,255,0.3); }
-  .detail-company-text h2 { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; }
-  .detail-company-text p { color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 4px; }
-  .detail-badges { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
-  .badge { padding: 4px 12px; border-radius: 20px; font-size: 0.72rem; font-weight: 700; font-family: 'Sora', sans-serif; }
-  .badge-verified { background: var(--success); color: #fff; }
-  .badge-accessible { background: #7C3AED; color: #fff; }
-  .badge-years { background: rgba(244,162,97,0.25); color: var(--gold); border: 1px solid rgba(244,162,97,0.4); }
-
-  .detail-content { padding: 30px 5%; display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
-  @media (max-width: 768px) { .detail-content { grid-template-columns: 1fr; } }
-  .detail-main {}
-  .detail-sidebar {}
-  .detail-section { background: var(--white); border-radius: 16px; padding: 24px; box-shadow: var(--card-shadow); margin-bottom: 20px; }
-  .detail-section h3 { font-family: 'Sora', sans-serif; font-size: 1rem; font-weight: 800; color: var(--primary); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--border); }
-
-  /* MAP WIDGET */
-  .map-widget { background: var(--white); border-radius: 16px; padding: 24px; box-shadow: var(--card-shadow); margin-bottom: 20px; }
-  .map-widget h3 { font-family: 'Sora', sans-serif; font-size: 1rem; font-weight: 800; color: var(--primary); margin-bottom: 16px; }
-  .map-input-group { margin-bottom: 14px; }
-  .map-input-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--primary); margin-bottom: 6px; }
-  .map-input-row { display: flex; gap: 8px; }
-  .map-input-row input { flex: 1; padding: 10px 14px; border: 2px solid var(--border); border-radius: 9px; font-family: 'DM Sans'; font-size: 0.9rem; color: var(--dark); transition: border .2s; }
-  .map-input-row input:focus { outline: none; border-color: var(--primary); }
-  .map-locate-btn { background: var(--primary); color: #fff; border: none; padding: 10px 14px; border-radius: 9px; cursor: pointer; font-size: 1rem; transition: background .2s; flex-shrink: 0; }
-  .map-locate-btn:hover { background: #0d1e4f; }
-  .map-preview {
-    width: 100%; height: 200px; border-radius: 12px; overflow: hidden;
-    border: 2px solid var(--border); margin-top: 14px; position: relative;
-    background: #e8eef5;
-  }
-  .map-preview iframe { width: 100%; height: 100%; border: none; }
-  .map-placeholder {
-    width: 100%; height: 100%; display: flex; flex-direction: column;
-    align-items: center; justify-content: center; gap: 8px; color: var(--gray);
-    font-size: 0.85rem;
-  }
-  .map-placeholder-icon { font-size: 2rem; }
-  .map-route-info { display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
-  .map-route-badge { background: #EEF2FF; padding: 8px 14px; border-radius: 8px; font-size: 0.8rem; color: var(--primary); font-weight: 600; }
-
-  /* VEHICLES */
-  .vehicles-list { display: flex; flex-direction: column; gap: 12px; }
-  .vehicle-item { border: 2px solid var(--border); border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; transition: border .2s; cursor: pointer; }
-  .vehicle-item:hover { border-color: var(--primary); }
-  .vehicle-item.selected { border-color: var(--primary); background: #EEF2FF; }
-  .vehicle-icon { font-size: 2rem; flex-shrink: 0; }
-  .vehicle-info { flex: 1; }
-  .vehicle-info h4 { font-family: 'Sora', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--dark); }
-  .vehicle-info p { font-size: 0.78rem; color: var(--gray); margin-top: 2px; }
-  .vehicle-price { font-family: 'Sora', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--primary); white-space: nowrap; }
-
-  /* REVIEWS */
-  .reviews-summary { display: flex; align-items: center; gap: 24px; padding: 16px; background: #F8F9FC; border-radius: 12px; margin-bottom: 20px; }
-  .review-big-score { font-family: 'Sora', sans-serif; font-size: 3rem; font-weight: 800; color: var(--primary); line-height: 1; }
-  .review-breakdown { flex: 1; }
-  .review-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-  .review-bar-label { font-size: 0.75rem; color: var(--gray); width: 16px; text-align: right; }
-  .review-bar-bg { flex: 1; height: 6px; background: var(--border); border-radius: 3px; }
-  .review-bar-fill { height: 100%; border-radius: 3px; background: #F59E0B; }
-  .review-bar-count { font-size: 0.72rem; color: var(--gray); width: 24px; }
-
-  .reviews-list { display: flex; flex-direction: column; gap: 16px; }
-  .review-item { border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
-  .review-item-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; }
-  .review-user { display: flex; align-items: center; gap: 10px; }
-  .review-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
-  .review-user-info h5 { font-family: 'Sora', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--dark); }
-  .review-user-info span { font-size: 0.75rem; color: var(--gray); }
-  .review-stars { color: #F59E0B; font-size: 0.9rem; }
-  .review-text { font-size: 0.85rem; color: var(--gray); line-height: 1.6; margin-bottom: 10px; }
-  .review-photos { display: flex; gap: 8px; flex-wrap: wrap; }
-  .review-photo { width: 70px; height: 70px; border-radius: 8px; object-fit: cover; cursor: pointer; border: 2px solid var(--border); transition: border .2s; }
-  .review-photo:hover { border-color: var(--primary); }
-
-  /* ADD REVIEW */
-  .add-review-section { background: var(--white); border-radius: 16px; padding: 24px; box-shadow: var(--card-shadow); margin-bottom: 20px; }
-  .add-review-section h3 { font-family: 'Sora', sans-serif; font-size: 1rem; font-weight: 800; color: var(--primary); margin-bottom: 16px; }
-  .star-rating-input { display: flex; gap: 6px; margin-bottom: 14px; }
-  .star-btn { font-size: 1.8rem; cursor: pointer; color: #D1D5DB; transition: color .15s; }
-  .star-btn.active { color: #F59E0B; }
-  .form-group { margin-bottom: 14px; }
-  .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--primary); margin-bottom: 6px; }
-  .form-group input, .form-group textarea, .form-group select {
-    width: 100%; padding: 10px 14px; border: 2px solid var(--border); border-radius: 9px;
-    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--dark);
-    background: var(--white); transition: border .2s;
-  }
-  .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
-  .form-group textarea { resize: vertical; min-height: 80px; }
-  .photo-upload-area {
-    border: 2px dashed var(--border); border-radius: 12px; padding: 20px;
-    text-align: center; cursor: pointer; transition: all .2s; margin-bottom: 14px;
-  }
-  .photo-upload-area:hover { border-color: var(--primary); background: #EEF2FF; }
-  .photo-upload-area input { display: none; }
-  .upload-icon { font-size: 2rem; margin-bottom: 8px; }
-  .upload-text { font-size: 0.85rem; color: var(--gray); }
-  .upload-text strong { color: var(--primary); }
-  .preview-photos-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-  .preview-photo-item { position: relative; }
-  .preview-photo-item img { width: 70px; height: 70px; border-radius: 8px; object-fit: cover; }
-  .remove-photo { position: absolute; top: -6px; right: -6px; background: var(--accent); color: #fff; border: none; border-radius: 50%; width: 20px; height: 20px; cursor: pointer; font-size: 0.7rem; display: flex; align-items: center; justify-content: center; }
-  .btn-submit-review { width: 100%; background: var(--primary); color: #fff; border: none; padding: 13px; border-radius: 10px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.92rem; cursor: pointer; transition: background .2s; }
-  .btn-submit-review:hover { background: #0d1e4f; }
-
-  /* SIDEBAR */
-  .sidebar-contact { background: var(--white); border-radius: 16px; padding: 24px; box-shadow: var(--card-shadow); margin-bottom: 20px; }
-  .sidebar-contact h3 { font-family: 'Sora', sans-serif; font-size: 1rem; font-weight: 800; color: var(--primary); margin-bottom: 16px; }
-  .contact-info-item { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--gray); margin-bottom: 10px; }
-  .contact-icon { font-size: 1.1rem; }
-  .whatsapp-btn {
-    width: 100%; background: #25D366; color: #fff; border: none; padding: 13px;
-    border-radius: 12px; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 0.95rem;
-    cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;
-    transition: all .2s; margin-top: 12px;
-  }
-  .whatsapp-btn:hover { background: #1ebe5a; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
-  .whatsapp-btn svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; }
-
-  /* MODAL */
   .modal-overlay {
     display: none; position: fixed; inset: 0; background: rgba(10,36,99,0.65); z-index: 1000;
     align-items: center; justify-content: center; padding: 20px;
@@ -325,56 +123,57 @@
   .modal-close { background: rgba(255,255,255,0.15); border: none; color: #fff; width: 36px; height: 36px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s; }
   .modal-close:hover { background: rgba(255,255,255,0.25); }
   .modal-body { padding: 32px; }
+
   .tabs { display: flex; gap: 0; margin-bottom: 28px; background: var(--light); border-radius: 10px; padding: 4px; }
   .tab-btn { flex: 1; padding: 10px; border: none; background: transparent; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 0.85rem; color: var(--gray); border-radius: 8px; cursor: pointer; transition: all .2s; }
   .tab-btn.active { background: var(--white); color: var(--primary); box-shadow: 0 2px 8px rgba(10,36,99,0.1); }
   .tab-content { display: none; }
   .tab-content.active { display: block; }
+
+  .form-group { margin-bottom: 18px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--primary); margin-bottom: 6px; }
+  input, select, textarea {
+    width: 100%; padding: 11px 14px; border: 2px solid var(--border); border-radius: 9px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: var(--dark);
+    background: var(--white); transition: border .2s;
+  }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); }
+  textarea { resize: vertical; min-height: 80px; }
+
   .flete-fields { display: none; background: #F0F4FF; border-radius: 12px; padding: 18px; margin-bottom: 18px; border: 1.5px dashed #c5d0f0; }
   .flete-fields.visible { display: block; }
   .flete-fields h4 { font-family: 'Sora', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--primary); margin-bottom: 14px; }
-  .modal-note { font-size: 0.78rem; color: var(--gray); text-align: center; margin-top: 12px; }
 
-  /* SUCCESS TOAST */
-  .toast {
-    position: fixed; bottom: 24px; right: 24px; background: var(--success); color: #fff;
-    padding: 14px 20px; border-radius: 12px; font-family: 'Sora', sans-serif; font-weight: 600;
-    font-size: 0.88rem; z-index: 9999; box-shadow: 0 8px 30px rgba(16,185,129,0.4);
-    transform: translateY(100px); opacity: 0; transition: all .4s cubic-bezier(.34,1.56,.64,1);
-    display: flex; align-items: center; gap: 8px;
+  .whatsapp-btn {
+    width: 100%; background: #25D366; color: #fff; border: none; padding: 15px;
+    border-radius: 12px; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1rem;
+    cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;
+    transition: all .2s; margin-top: 8px;
   }
-  .toast.show { transform: translateY(0); opacity: 1; }
-
-  /* ACCESSIBLE BADGE */
-  .accessible-info { background: #F3E8FF; border: 2px solid #C4B5FD; border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
-  .accessible-info-icon { font-size: 1.5rem; }
-  .accessible-info-text { font-size: 0.82rem; color: #6D28D9; font-weight: 500; }
+  .whatsapp-btn:hover { background: #1ebe5a; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
+  .whatsapp-btn svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; }
+  .modal-note { font-size: 0.78rem; color: var(--gray); text-align: center; margin-top: 12px; }
 
   @media (max-width: 600px) {
     .form-row { grid-template-columns: 1fr; }
     .steps::before { display: none; }
     .nav-links { display: none; }
     .hero { padding: 50px 5% 60px; }
-    .providers-grid { grid-template-columns: 1fr; padding: 20px 4%; }
-    .detail-content { padding: 20px 4%; }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo" onclick="goHome()">Servi<span>Pro</span></div>
+  <div class="nav-logo">Servi<span>Pro</span></div>
   <div class="nav-links">
-    <a onclick="goHome(); setTimeout(()=>document.getElementById('servicios').scrollIntoView({behavior:'smooth'}),100)">Servicios</a>
-    <a onclick="goHome(); setTimeout(()=>document.getElementById('como-funciona').scrollIntoView({behavior:'smooth'}),100)">Como funciona</a>
-    <a onclick="goHome(); setTimeout(()=>document.getElementById('contacto').scrollIntoView({behavior:'smooth'}),100)">Contacto</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#contacto">Contacto</a>
   </div>
-  <button class="nav-cta" onclick="goHome(); setTimeout(()=>document.getElementById('servicios').scrollIntoView({behavior:'smooth'}),100)">Solicitar servicio</button>
+  <button class="nav-cta" onclick="document.getElementById('servicios').scrollIntoView({behavior:'smooth'})">Solicitar servicio</button>
 </nav>
-
-<!-- ===== HOME PAGE ===== -->
-<div id="page-home" class="page active">
 
 <div class="hero">
   <div class="hero-content">
@@ -414,12 +213,12 @@
       <button class="btn-service" onclick="openModal('Limpieza Profesional','limpieza')">Solicitar servicio</button>
     </div>
 
-    <div class="service-card" onclick="showProviders('flete')" style="cursor:pointer;">
+    <div class="service-card">
       <span class="service-icon">🚚</span>
       <h3>Transporte y Fletes</h3>
-      <p>Mudanzas, traslado de carga local y envios. Elegí entre empresas verificadas con diferentes tipos de camiones. Valorados por la comunidad.</p>
+      <p>Mudanzas, traslado de carga local y envios. Indicá el punto de recogida y destino, y coordinamos el mejor vehiculo para vos.</p>
       <div class="service-tags"><span class="tag">Mudanzas</span><span class="tag">Carga local</span><span class="tag">Envios</span></div>
-      <button class="btn-service" onclick="event.stopPropagation(); showProviders('flete')">Ver empresas disponibles</button>
+      <button class="btn-service" onclick="openModal('Transporte y Fletes','flete')">Solicitar servicio</button>
     </div>
 
     <div class="service-card">
@@ -430,12 +229,12 @@
       <button class="btn-service" onclick="openModal('Mantenimiento Preventivo IA','preventivo')">Solicitar consulta</button>
     </div>
 
-    <div class="service-card" onclick="showProviders('traslado')" style="cursor:pointer;">
+    <div class="service-card">
       <span class="service-icon">🚗</span>
       <h3>Traslado de Personas</h3>
-      <p>Conductores verificados para traslados personales y corporativos. Incluye vehiculos adaptados para personas con silla de ruedas o movilidad reducida.</p>
-      <div class="service-tags"><span class="tag">Personal</span><span class="tag">Corporativo</span><span class="tag">♿ Accesible</span></div>
-      <button class="btn-service" onclick="event.stopPropagation(); showProviders('traslado')">Ver conductores disponibles</button>
+      <p>Vehiculos seguros y conductores verificados para traslados personales, corporativos o eventos especiales en el Gran Asuncion.</p>
+      <div class="service-tags"><span class="tag">Personal</span><span class="tag">Corporativo</span><span class="tag">Eventos</span></div>
+      <button class="btn-service" onclick="openModal('Traslado de Personas','traslado')">Solicitar servicio</button>
     </div>
 
     <div class="service-card">
@@ -454,62 +253,17 @@
   <p class="section-sub">En 4 pasos simples tenes un profesional en tu puerta</p>
   <div class="steps">
     <div class="step"><div class="step-num">1</div><h4>Elegí el servicio</h4><p>Seleccioná el tipo de servicio que necesitás del catalogo.</p></div>
-    <div class="step"><div class="step-num">2</div><h4>Elegí el proveedor</h4><p>Compará empresas, leé valoraciones y elegí la mejor opcion.</p></div>
-    <div class="step"><div class="step-num">3</div><h4>Confirmá por WhatsApp</h4><p>Te conectamos directamente para coordinar fecha, hora y ubicacion.</p></div>
-    <div class="step"><div class="step-num">4</div><h4>Calificá el servicio</h4><p>Dejá tu opinion y fotos para ayudar a otros usuarios.</p></div>
+    <div class="step"><div class="step-num">2</div><h4>Completá tu domicilio</h4><p>Ingresá tu direccion y detalles del trabajo a realizar.</p></div>
+    <div class="step"><div class="step-num">3</div><h4>Confirmá por WhatsApp</h4><p>Te conectamos directamente con nuestro equipo para coordinar.</p></div>
+    <div class="step"><div class="step-num">4</div><h4>Listo!</h4><p>Un profesional verificado llega a tu puerta con garantia de calidad.</p></div>
   </div>
 </section>
-
+  
 <footer class="footer" id="contacto">
-  <p>&copy; 2025 <strong style="color:#fff">ServiPro E.A.S.</strong> &middot; San Lorenzo, Paraguay &middot; Desarrollado por Dorian Cristaldo &amp; Giovanni Bazan</p>
+  <p>&copy; 2026 <strong style="color:#fff">ServiPro E.A.S.</strong> &middot; San Lorenzo, Paraguay &middot; Desarrollado por Dorian Cristaldo &amp; Giovanni Bazan</p>
 </footer>
 
-</div><!-- /page-home -->
-
-
-<!-- ===== PROVIDERS LIST PAGE ===== -->
-<div id="page-providers" class="page">
-  <div class="provider-header">
-    <button class="back-btn" onclick="goHome()">&#8592; Volver a servicios</button>
-    <h2 id="providers-title">Empresas de Transporte y Fletes</h2>
-    <p id="providers-sub">Elegí la empresa que mejor se adapta a tu necesidad</p>
-  </div>
-  <div class="provider-filters" id="provider-filters">
-    <span class="filter-label">Filtrar:</span>
-    <!-- Filters injected by JS -->
-  </div>
-  <div class="providers-grid" id="providers-grid">
-    <!-- Provider cards injected by JS -->
-  </div>
-</div>
-
-
-<!-- ===== PROVIDER DETAIL PAGE ===== -->
-<div id="page-detail" class="page">
-  <div class="detail-header">
-    <button class="back-btn" onclick="goBack()" style="background:rgba(255,255,255,0.15);border:none;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:'Sora',sans-serif;font-size:0.85rem;font-weight:600;display:inline-flex;align-items:center;gap:6px;margin-bottom:18px;transition:background .2s;">&#8592; Volver a la lista</button>
-    <div class="detail-company-info">
-      <div class="detail-company-avatar" id="detail-avatar">🚚</div>
-      <div class="detail-company-text">
-        <h2 id="detail-name">Transportes Garcia</h2>
-        <p id="detail-location">📍 San Lorenzo, Paraguay</p>
-        <div class="detail-badges" id="detail-badges"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail-content">
-    <div class="detail-main" id="detail-main-col">
-      <!-- Injected by JS -->
-    </div>
-    <div class="detail-sidebar" id="detail-sidebar-col">
-      <!-- Injected by JS -->
-    </div>
-  </div>
-</div>
-
-
-<!-- MODAL (mantenimiento / limpieza / otros) -->
+<!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
   <div class="modal" id="modalBox">
     <div class="modal-header">
@@ -517,10 +271,13 @@
       <button class="modal-close" onclick="closeModal()">&#x2715;</button>
     </div>
     <div class="modal-body">
+
       <div class="tabs">
         <button class="tab-btn active" id="tabBtnDomicilio" onclick="switchTab('domicilio',this)">Domicilio</button>
         <button class="tab-btn" id="tabBtnServicio" onclick="switchTab('servicio',this)">Detalle del servicio</button>
       </div>
+
+      <!-- DOMICILIO TAB -->
       <div class="tab-content active" id="tab-domicilio">
         <div class="form-row">
           <div class="form-group">
@@ -550,7 +307,34 @@
           <button class="btn-primary" style="padding:10px 24px;font-size:0.88rem;" onclick="switchTab('servicio',document.getElementById('tabBtnServicio'))">Siguiente &rarr;</button>
         </div>
       </div>
+
+      <!-- SERVICIO TAB -->
       <div class="tab-content" id="tab-servicio">
+
+        <!-- FLETE ONLY -->
+        <div class="flete-fields" id="fleteFields">
+          <h4>Datos del flete</h4>
+          <div class="form-group">
+            <label>Direccion de recogida de mercaderia *</label>
+            <input type="text" id="origenFlete" placeholder="Ej: Av. San Blas 500, Asuncion">
+          </div>
+          <div class="form-group">
+            <label>Direccion de traslado / destino *</label>
+            <input type="text" id="destinoFlete" placeholder="Ej: Calle Ytororo 120, Luque">
+          </div>
+          <div class="form-group">
+            <label>Tipo de carga</label>
+            <select id="tipoCarga">
+              <option value="">Seleccioná...</option>
+              <option>Mudanza de hogar</option>
+              <option>Mercaderia / bultos</option>
+              <option>Electrodomesticos</option>
+              <option>Materiales de construccion</option>
+              <option>Otros</option>
+            </select>
+          </div>
+        </div>
+
         <div class="form-group">
           <label>Tipo de servicio especifico</label>
           <select id="tipoServicio"><option value="">Seleccioná una opcion...</option></select>
@@ -574,669 +358,114 @@
           <label>Descripcion del trabajo</label>
           <textarea id="descripcion" placeholder="Contanos brevemente que necesitas..."></textarea>
         </div>
+
         <button class="whatsapp-btn" onclick="enviarWhatsApp()">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Enviar solicitud por WhatsApp
         </button>
         <p class="modal-note">Nuestro equipo te contactara para confirmar disponibilidad y precio.</p>
       </div>
+
     </div>
   </div>
 </div>
 
-<!-- TOAST -->
-<div class="toast" id="toast">✅ ¡Comentario enviado! Gracias por tu valoracion.</div>
-
 <script>
-const WA_NUMBER = '595971234567';
+  const WA_NUMBER = '595971234567';
 
-// ===================== DATA =====================
-const providers = {
-  flete: [
-    {
-      id: 'f1', name: 'Transportes Garcia Hnos.', icon: '🚛', location: 'San Lorenzo, Paraguay',
-      rating: 4.8, reviewCount: 124, years: '12 años en el mercado',
-      verified: true, accessible: false,
-      vehicles: [
-        { icon: '🚐', name: 'Furgon pequeño', desc: 'Hasta 500 kg. Ideal para mudanzas chicas, paquetes.', price: 'Desde Gs. 80.000' },
-        { icon: '🚛', name: 'Camion mediano', desc: 'Hasta 3.000 kg. Mudanzas de hogar, electrodomesticos.', price: 'Desde Gs. 180.000' },
-        { icon: '🚚', name: 'Camion grande', desc: 'Hasta 8.000 kg. Empresas, construccion, cargas pesadas.', price: 'Desde Gs. 320.000' },
-      ],
-      tags: ['Mudanzas', 'Mercaderia', 'Construccion'],
-      phone: '0981 111 222',
-      description: 'Empresa familiar con mas de 12 anos en el mercado. Especializada en mudanzas y traslado de carga en el Gran Asuncion.',
-      reviews: [
-        { user: 'Carlos M.', initials: 'CM', stars: 5, date: 'Marzo 2025', text: 'Excelente servicio, llegaron puntual y cuidaron muy bien los muebles. Totalmente recomendado.', photos: [] },
-        { user: 'Laura P.', initials: 'LP', stars: 4, date: 'Febrero 2025', text: 'Muy buenos! El precio fue justo y el equipo muy amable. La mudanza salio perfecta.', photos: ['📷','📷'] },
-        { user: 'Diego R.', initials: 'DR', stars: 5, date: 'Enero 2025', text: 'Tercer vez que los contratan para nuestra empresa. Siempre cumplen. Camiones en buen estado.', photos: [] },
-      ],
-      ratingBreakdown: [5,4,3,2,1],
-      ratingCounts: [89, 25, 7, 2, 1],
-      serviceType: 'flete'
-    },
-    {
-      id: 'f2', name: 'Fletes Rapidos SRL', icon: '🚐', location: 'Luque, Paraguay',
-      rating: 4.5, reviewCount: 87, years: '5 años en el mercado',
-      verified: true, accessible: false,
-      vehicles: [
-        { icon: '🚐', name: 'Furgon Express', desc: 'Hasta 400 kg. Entregas rapidas, documentos, paquetes.', price: 'Desde Gs. 60.000' },
-        { icon: '🚚', name: 'Camion mediano', desc: 'Hasta 2.500 kg. Mudanzas pequeñas y medianas.', price: 'Desde Gs. 150.000' },
-      ],
-      tags: ['Express', 'Paquetes', 'Mudanzas'],
-      phone: '0971 333 444',
-      description: 'Especialistas en fletes express y entregas rapidas en todo el Gran Asuncion. Seguimiento en tiempo real disponible.',
-      reviews: [
-        { user: 'Ana G.', initials: 'AG', stars: 5, date: 'Abril 2025', text: 'Super rapidos! Entregaron todo sin novedad. Muy recomendados para mudanzas chicas.', photos: [] },
-        { user: 'Roberto S.', initials: 'RS', stars: 4, date: 'Marzo 2025', text: 'Buen servicio, precio accesible. Llegaron un poco tarde pero avisaron con tiempo.', photos: ['📷'] },
-      ],
-      ratingBreakdown: [5,4,3,2,1],
-      ratingCounts: [55, 22, 7, 2, 1],
-      serviceType: 'flete'
-    },
-    {
-      id: 'f3', name: 'Mega Transporte PY', icon: '🏗️', location: 'Capiata, Paraguay',
-      rating: 4.6, reviewCount: 203, years: '18 años en el mercado',
-      verified: true, accessible: false,
-      vehicles: [
-        { icon: '🚛', name: 'Camion volqueta', desc: 'Escombros, tierra, aridos. Ideal para construccion.', price: 'Desde Gs. 250.000' },
-        { icon: '🚚', name: 'Semi-remolque', desc: 'Cargas muy pesadas, industria, importacion.', price: 'Desde Gs. 500.000' },
-        { icon: '🚛', name: 'Camion frigorifico', desc: 'Carga refrigerada, alimentos, farmaceuticos.', price: 'Desde Gs. 380.000' },
-      ],
-      tags: ['Construccion', 'Industria', 'Frigorifico'],
-      phone: '0991 555 666',
-      description: 'Lider en transporte pesado e industrial en Paraguay. Flota de mas de 20 unidades para todo tipo de carga.',
-      reviews: [
-        { user: 'Constructora JB', initials: 'JB', stars: 5, date: 'Abril 2025', text: 'Trabajamos con ellos hace 3 anos. Siempre confiables, flota amplia y precios competitivos.', photos: [] },
-        { user: 'Maria L.', initials: 'ML', stars: 4, date: 'Febrero 2025', text: 'Muy profesionales. El camion frigorifico llego a tiempo y en perfectas condiciones.', photos: ['📷','📷','📷'] },
-      ],
-      ratingBreakdown: [5,4,3,2,1],
-      ratingCounts: [150, 40, 10, 2, 1],
-      serviceType: 'flete'
-    },
-  ],
-  traslado: [
-    {
-      id: 't1', name: 'TransVIP Paraguay', icon: '🚙', location: 'Asuncion, Paraguay',
-      rating: 4.9, reviewCount: 312, years: '8 años en el mercado',
-      verified: true, accessible: false,
-      vehicles: [
-        { icon: '🚗', name: 'Sedan ejecutivo', desc: 'Toyota Corolla / similar. Hasta 4 pasajeros con AC.', price: 'Desde Gs. 50.000' },
-        { icon: '🚙', name: 'SUV premium', desc: 'Toyota Fortuner / similar. Hasta 6 pasajeros.', price: 'Desde Gs. 90.000' },
-        { icon: '🚐', name: 'Van corporativa', desc: 'Hasta 10 pasajeros. Ideal para grupos y eventos.', price: 'Desde Gs. 140.000' },
-      ],
-      tags: ['Ejecutivo', 'Corporativo', 'Eventos'],
-      phone: '0981 777 888',
-      description: 'Servicio premium de traslado de personas en el Gran Asuncion. Conductores con licencia profesional y vehiculos con seguro completo.',
-      reviews: [
-        { user: 'Empresa ABC', initials: 'AB', stars: 5, date: 'Abril 2025', text: 'Excelente servicio para nuestros ejecutivos. Puntuales, profesionales y muy amables.', photos: [] },
-        { user: 'Sofia R.', initials: 'SR', stars: 5, date: 'Marzo 2025', text: 'Perfecto para ir al aeropuerto. El conductor esperó con un cartel y me ayudó con las valijas.', photos: [] },
-        { user: 'Fernando T.', initials: 'FT', stars: 5, date: 'Marzo 2025', text: 'Muy buena experiencia para nuestro evento corporativo. Todos llegaron a tiempo.', photos: ['📷'] },
-      ],
-      ratingBreakdown: [5,4,3,2,1],
-      ratingCounts: [270, 32, 7, 2, 1],
-      serviceType: 'traslado'
-    },
-    {
-      id: 't2', name: 'MoviAccess PY ♿', icon: '♿', location: 'San Lorenzo, Paraguay',
-      rating: 4.9, reviewCount: 156, years: '6 años en el mercado',
-      verified: true, accessible: true,
-      vehicles: [
-        { icon: '🚐', name: 'Van adaptada silla de ruedas', desc: 'Rampa hidraulica, espacio seguro. Hasta 2 sillas + 4 acompanantes.', price: 'Desde Gs. 80.000', accessible: true },
-        { icon: '🚗', name: 'Sedan accesible', desc: 'Asientos amplios, ayuda para abordaje. Hasta 3 pasajeros.', price: 'Desde Gs. 55.000', accessible: true },
-        { icon: '🚐', name: 'Van camilla', desc: 'Para traslados medicos, camilla incluida, acompanante de salud.', price: 'Desde Gs. 120.000', accessible: true },
-      ],
-      tags: ['Silla de ruedas', 'Movilidad reducida', 'Traslado medico'],
-      phone: '0971 999 000',
-      description: 'Especialistas en traslado de personas con discapacidad o movilidad reducida. Conductores capacitados en asistencia a personas con necesidades especiales.',
-      reviews: [
-        { user: 'Familia Gonzalez', initials: 'FG', stars: 5, date: 'Abril 2025', text: 'Un servicio invaluable. Cuidan a mi mama con mucha atencion y paciencia. Totalmente recomendados.', photos: [] },
-        { user: 'Centro Medico Vida', initials: 'CM', stars: 5, date: 'Marzo 2025', text: 'Trabajamos con ellos para derivacion de pacientes. Siempre puntuales y muy profesionales.', photos: [] },
-        { user: 'Patricia V.', initials: 'PV', stars: 5, date: 'Febrero 2025', text: 'El conductor fue sumamente amable y me ayudo con todo. La van tiene rampa moderna y comoda.', photos: ['📷','📷'] },
-      ],
-      ratingBreakdown: [5,4,3,2,1],
-      ratingCounts: [140, 12, 3, 1, 0],
-      serviceType: 'traslado'
-    },
-    {
-      id: 't3', name: 'CuidaMov Salud', icon: '🏥', location: 'Asuncion, Paraguay',
-      rating: 4.7, reviewCount: 89, years: '4 años en el mercado',
-      verified: true, accessible: true,
-      vehicles: [
-        { icon: '🚐', name: 'Van medica adaptada', desc: 'Con rampa, equipamiento basico de primeros auxilios, oxigeno.', price: 'Desde Gs. 100.000', accessible: true },
-        { icon: '🚑', name: 'Traslado no emergencia', desc: 'Para citas medicas, rehabilitacion, dialisis. Asistente incluido.', price: 'Desde Gs. 90.000', accessible: true },
-      ],
-      tags: ['Traslado medico', 'Adultos mayores', 'Rehabilitacion'],
-      phone: '0981 444 333',
-      description: 'Servicio especializado en traslado de pacientes a centros medicos, sesiones de rehabilitacion y adultos mayores. Personal capacitado en primeros auxilios.',
-      reviews: [
-        { user: 'Juan P.', initials: 'JP', stars: 5, date: 'Abril 2025', text: 'Llevan a mi papa a dialisis tres veces por semana. Muy puntuales y lo tratan increible.', photos: [] },
-        { user: 'Dr. Armando F.', initials: 'AF', stars: 4, date: 'Enero 2025', text: 'Buen servicio para mis pacientes de mayor riesgo. El personal conoce protocolos medicos basicos.', photos: [] },
-      ],
-      ratingBreakdown: [5,4,3,2,1],
-      ratingCounts: [68, 15, 4, 1, 1],
-      serviceType: 'traslado'
-    },
-    {
-      id: 't4', name: 'Chofer Plus PY', icon: '🎩', location: 'Fernando de la Mora, PY',
-      rating: 4.6, reviewCount: 178, years: '7 años en el mercado',
-      verified: true, accessible: false,
-      vehicles: [
-        { icon: '🚗', name: 'Auto particular', desc: 'Para traslados diarios, colegios, aeropuerto.', price: 'Desde Gs. 40.000' },
-        { icon: '🚙', name: 'Minivan familiar', desc: 'Hasta 7 pasajeros. Salidas, cumpleanos, eventos.', price: 'Desde Gs. 75.000' },
-      ],
-      tags: ['Diario', 'Aeropuerto', 'Familiar'],
-      phone: '0991 222 111',
-      description: 'Choferes profesionales disponibles por viaje o por horas. Ideales para traslados escolares, aeropuerto y eventos familiares.',
-      reviews: [
-        { user: 'Claudia S.', initials: 'CS', stars: 5, date: 'Abril 2025', text: 'Lleva a mis hijos al colegio todos los dias. Super puntual y de confianza.', photos: [] },
-        { user: 'Marcos A.', initials: 'MA', stars: 4, date: 'Marzo 2025', text: 'Muy buen servicio para ir al aeropuerto. El chofer fue amable y ayudo con las maletas.', photos: [] },
-      ],
-      ratingBreakdown: [5,4,3,2,1],
-      ratingCounts: [120, 45, 10, 2, 1],
-      serviceType: 'traslado'
-    }
-  ]
-};
-
-let currentServiceType = '';
-let currentProviderId = '';
-let currentFilter = 'todos';
-let previousPage = 'home';
-let selectedStars = 0;
-let previewPhotos = [];
-let selectedVehicle = null;
-
-// Origin/Dest for map
-let mapOrigin = '';
-let mapDest = '';
-
-// ===================== NAVIGATION =====================
-function showPage(pageId) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + pageId).classList.add('active');
-  window.scrollTo(0,0);
-}
-function goHome() { showPage('home'); }
-function goBack() { showPage('providers'); window.scrollTo(0,0); }
-
-// ===================== PROVIDERS LIST =====================
-function showProviders(type) {
-  currentServiceType = type;
-  currentFilter = 'todos';
-  previousPage = 'home';
-  renderProvidersList(type);
-  showPage('providers');
-}
-
-function renderProvidersList(type) {
-  const list = providers[type] || [];
-  const titles = { flete: 'Empresas de Transporte y Fletes', traslado: 'Conductores y Traslado de Personas' };
-  const subs = { flete: 'Elegí la empresa que mejor se adapta a tu necesidad. Todos verificados.', traslado: 'Conductores verificados para todos tus traslados, incluyendo servicios accesibles.' };
-  document.getElementById('providers-title').textContent = titles[type] || 'Proveedores';
-  document.getElementById('providers-sub').textContent = subs[type] || '';
-
-  // Filters
-  const filterDiv = document.getElementById('provider-filters');
-  if (type === 'flete') {
-    filterDiv.innerHTML = `
-      <span class="filter-label">Filtrar:</span>
-      <button class="filter-btn active" onclick="applyFilter('todos',this,'flete')">Todos</button>
-      <button class="filter-btn" onclick="applyFilter('mudanza',this,'flete')">🏠 Mudanzas</button>
-      <button class="filter-btn" onclick="applyFilter('construccion',this,'flete')">🏗️ Construccion</button>
-      <button class="filter-btn" onclick="applyFilter('express',this,'flete')">⚡ Express</button>
-    `;
-  } else if (type === 'traslado') {
-    filterDiv.innerHTML = `
-      <span class="filter-label">Filtrar:</span>
-      <button class="filter-btn active" onclick="applyFilter('todos',this,'traslado')">Todos</button>
-      <button class="filter-btn" onclick="applyFilter('accesible',this,'traslado')">♿ Accesible</button>
-      <button class="filter-btn" onclick="applyFilter('ejecutivo',this,'traslado')">👔 Ejecutivo</button>
-      <button class="filter-btn" onclick="applyFilter('medico',this,'traslado')">🏥 Traslado medico</button>
-    `;
-  }
-
-  renderProviderCards(list);
-}
-
-function applyFilter(filter, btn, type) {
-  currentFilter = filter;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  let list = providers[type] || [];
-  if (filter === 'accesible') list = list.filter(p => p.accessible);
-  if (filter === 'mudanza') list = list.filter(p => p.tags.some(t => t.toLowerCase().includes('mudanza')));
-  if (filter === 'construccion') list = list.filter(p => p.tags.some(t => t.toLowerCase().includes('construc')));
-  if (filter === 'express') list = list.filter(p => p.tags.some(t => t.toLowerCase().includes('express')));
-  if (filter === 'ejecutivo') list = list.filter(p => p.tags.some(t => t.toLowerCase().includes('ejecutivo') || t.toLowerCase().includes('corporativo')));
-  if (filter === 'medico') list = list.filter(p => p.tags.some(t => t.toLowerCase().includes('medic') || t.toLowerCase().includes('rehabilit')));
-  renderProviderCards(list);
-}
-
-function renderProviderCards(list) {
-  const grid = document.getElementById('providers-grid');
-  if (list.length === 0) { grid.innerHTML = '<p style="color:var(--gray);font-size:0.9rem;padding:20px;">No hay proveedores para este filtro.</p>'; return; }
-  grid.innerHTML = list.map(p => `
-    <div class="provider-card">
-      <div class="provider-card-img">
-        ${p.accessible ? '<span class="provider-badge-accessible">♿ Accesible</span>' : ''}
-        <span>${p.icon}</span>
-        <span class="provider-badge-verified">✓ Verificado</span>
-      </div>
-      <div class="provider-card-body">
-        <h3>${p.name}</h3>
-        <div class="provider-meta">📍 ${p.location} &middot; ${p.years}</div>
-        <div class="stars-row">
-          <span class="stars">${renderStars(p.rating)}</span>
-          <span class="stars-count">${p.rating} (${p.reviewCount} valoraciones)</span>
-        </div>
-        <div class="provider-vehicles">
-          ${p.vehicles.map(v => `<span class="vehicle-tag ${v.accessible ? 'accessible' : ''}">${v.icon} ${v.name}</span>`).join('')}
-        </div>
-        <div class="provider-price">Precio estimado: <strong>${p.vehicles[0].price}</strong></div>
-        <div class="provider-card-actions">
-          <button class="btn-ver-perfil" onclick="showDetail('${p.id}')">Ver perfil completo</button>
-          <button class="btn-wa-small" title="Contactar por WhatsApp" onclick="contactWA('${p.phone}','${p.name}')">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-
-function contactWA(phone, name) {
-  const msg = `*Hola! Encontré a ${name} en ServiPro y quisiera consultar sobre sus servicios.*`;
-  window.open('https://wa.me/' + phone.replace(/\D/g,'') + '?text=' + encodeURIComponent(msg), '_blank');
-}
-
-// ===================== PROVIDER DETAIL =====================
-function showDetail(id) {
-  const all = [...providers.flete, ...providers.traslado];
-  const p = all.find(x => x.id === id);
-  if (!p) return;
-  currentProviderId = id;
-  selectedVehicle = null;
-  mapOrigin = ''; mapDest = '';
-
-  document.getElementById('detail-avatar').textContent = p.icon;
-  document.getElementById('detail-name').textContent = p.name;
-  document.getElementById('detail-location').textContent = '📍 ' + p.location;
-
-  const badgesDiv = document.getElementById('detail-badges');
-  badgesDiv.innerHTML = `<span class="badge badge-verified">✓ Verificado</span>
-    <span class="badge badge-years">⏱ ${p.years}</span>
-    ${p.accessible ? '<span class="badge badge-accessible">♿ Servicio Accesible</span>' : ''}`;
-
-  // MAIN COLUMN
-  const mainCol = document.getElementById('detail-main-col');
-  const isTransport = p.serviceType === 'flete' || p.serviceType === 'traslado';
-  const isAccessibleProvider = p.accessible;
-
-  mainCol.innerHTML = `
-    ${isAccessibleProvider ? `
-    <div class="detail-section">
-      <div class="accessible-info">
-        <span class="accessible-info-icon">♿</span>
-        <div class="accessible-info-text">
-          <strong>Servicio accesible certificado:</strong> Esta empresa cuenta con vehiculos adaptados y personal capacitado para personas con silla de ruedas, movilidad reducida o necesidades especiales.
-        </div>
-      </div>
-    </div>` : ''}
-
-    <!-- MAP WIDGET -->
-    ${isTransport ? `
-    <div class="map-widget">
-      <h3>📍 ¿A donde necesitás ir / enviar?</h3>
-      <div class="map-input-group">
-        <label>${p.serviceType === 'flete' ? 'Punto de recogida (origen)' : 'Punto de partida'}</label>
-        <div class="map-input-row">
-          <input type="text" id="map-origin" placeholder="Ej: Av. Eusebio Ayala 1200, San Lorenzo" oninput="mapOrigin=this.value;updateMapPreview()">
-          <button class="map-locate-btn" onclick="useMyLocation('origin')" title="Usar mi ubicacion actual">📍</button>
-        </div>
-      </div>
-      <div class="map-input-group">
-        <label>${p.serviceType === 'flete' ? 'Punto de destino (entrega)' : 'Destino'}</label>
-        <div class="map-input-row">
-          <input type="text" id="map-dest" placeholder="Ej: Calle Ytororo 450, Luque" oninput="mapDest=this.value;updateMapPreview()">
-          <button class="map-locate-btn" onclick="useMyLocation('dest')" title="Usar mi ubicacion actual">📍</button>
-        </div>
-      </div>
-      <div class="map-preview" id="map-preview">
-        <div class="map-placeholder" id="map-placeholder">
-          <div class="map-placeholder-icon">🗺️</div>
-          <div>Ingresá origen y destino para ver el mapa</div>
-        </div>
-        <iframe id="map-iframe" style="display:none;width:100%;height:100%;border:none;" allowfullscreen></iframe>
-      </div>
-      <div class="map-route-info" id="map-route-info" style="display:none;">
-        <div class="map-route-badge" id="route-distance">📏 Calculando...</div>
-        <div class="map-route-badge" id="route-time">⏱ Calculando...</div>
-      </div>
-    </div>` : ''}
-
-    <!-- VEHICLES -->
-    <div class="detail-section">
-      <h3>🚗 Vehiculos disponibles</h3>
-      <div class="vehicles-list">
-        ${p.vehicles.map((v,i) => `
-        <div class="vehicle-item ${v.accessible ? 'accessible-vehicle' : ''}" onclick="selectVehicle(${i},'${p.id}')" id="vehicle-${p.id}-${i}">
-          <div class="vehicle-icon">${v.icon}</div>
-          <div class="vehicle-info">
-            <h4>${v.name} ${v.accessible ? '<span style="color:#7C3AED;font-size:0.75rem;">♿ Accesible</span>' : ''}</h4>
-            <p>${v.desc}</p>
-          </div>
-          <div class="vehicle-price">${v.price}</div>
-        </div>`).join('')}
-      </div>
-    </div>
-
-    <!-- REVIEWS SUMMARY -->
-    <div class="detail-section">
-      <h3>⭐ Valoraciones de clientes</h3>
-      <div class="reviews-summary">
-        <div style="text-align:center">
-          <div class="review-big-score">${p.rating}</div>
-          <div style="color:#F59E0B;font-size:1.1rem;">${renderStars(p.rating)}</div>
-          <div style="font-size:0.75rem;color:var(--gray);margin-top:4px;">${p.reviewCount} valoraciones</div>
-        </div>
-        <div class="review-breakdown" style="flex:1">
-          ${[5,4,3,2,1].map((star,i) => {
-            const total = p.ratingCounts.reduce((a,b)=>a+b,0);
-            const pct = total>0 ? Math.round(p.ratingCounts[i]/total*100) : 0;
-            return `<div class="review-bar-row">
-              <span class="review-bar-label">${star}</span>
-              <div class="review-bar-bg"><div class="review-bar-fill" style="width:${pct}%"></div></div>
-              <span class="review-bar-count">${p.ratingCounts[i]}</span>
-            </div>`;
-          }).join('')}
-        </div>
-      </div>
-      <div class="reviews-list" id="reviews-list-${p.id}">
-        ${p.reviews.map(r => renderReviewItem(r)).join('')}
-      </div>
-    </div>
-
-    <!-- ADD REVIEW -->
-    <div class="add-review-section" id="add-review-${p.id}">
-      <h3>✍️ Dejá tu valoracion</h3>
-      <p style="font-size:0.82rem;color:var(--gray);margin-bottom:14px;">Solo disponible despues de haber contratado el servicio.</p>
-      <div class="star-rating-input" id="star-input-${p.id}">
-        ${[1,2,3,4,5].map(n => `<span class="star-btn" onclick="setStars(${n},'${p.id}')" id="star-${p.id}-${n}">★</span>`).join('')}
-      </div>
-      <div class="form-group">
-        <label>Tu nombre</label>
-        <input type="text" id="review-name-${p.id}" placeholder="Ej: Juan G.">
-      </div>
-      <div class="form-group">
-        <label>Tu comentario</label>
-        <textarea id="review-text-${p.id}" placeholder="Contanos tu experiencia con este proveedor..." style="min-height:90px;"></textarea>
-      </div>
-      <div class="photo-upload-area" onclick="document.getElementById('photo-input-${p.id}').click()">
-        <input type="file" id="photo-input-${p.id}" accept="image/*" multiple onchange="handlePhotoUpload(event,'${p.id}')">
-        <div class="upload-icon">📷</div>
-        <div class="upload-text"><strong>Adjuntar fotos</strong> — Hace clic o arrastrá tus imagenes aqui</div>
-      </div>
-      <div class="preview-photos-row" id="preview-photos-${p.id}"></div>
-      <button class="btn-submit-review" onclick="submitReview('${p.id}')">Enviar valoracion</button>
-    </div>
-  `;
-
-  // SIDEBAR
-  const sideCol = document.getElementById('detail-sidebar-col');
-  sideCol.innerHTML = `
-    <div class="sidebar-contact">
-      <h3>Contacto</h3>
-      <div class="contact-info-item"><span class="contact-icon">📞</span> ${p.phone}</div>
-      <div class="contact-info-item"><span class="contact-icon">📍</span> ${p.location}</div>
-      <div class="contact-info-item"><span class="contact-icon">⏰</span> Disponible 24/7</div>
-      <button class="whatsapp-btn" onclick="contactProviderWA('${p.id}')">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Contactar por WhatsApp
-      </button>
-    </div>
-    <div class="sidebar-contact">
-      <h3>Sobre la empresa</h3>
-      <p style="font-size:0.85rem;color:var(--gray);line-height:1.6;">${p.description}</p>
-      <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;">
-        ${p.tags.map(t=>`<span class="vehicle-tag">${t}</span>`).join('')}
-      </div>
-    </div>
-  `;
-
-  showPage('detail');
-}
-
-function renderReviewItem(r) {
-  const photoEmojis = r.photos.map(ph => `<span style="font-size:2rem;cursor:pointer" title="Ver foto">${ph}</span>`).join('');
-  return `
-  <div class="review-item">
-    <div class="review-item-header">
-      <div class="review-user">
-        <div class="review-avatar">${r.initials}</div>
-        <div class="review-user-info">
-          <h5>${r.user}</h5>
-          <span>${r.date}</span>
-        </div>
-      </div>
-      <div class="review-stars">${renderStars(r.stars)}</div>
-    </div>
-    <p class="review-text">${r.text}</p>
-    ${r.photos.length > 0 ? `<div class="review-photos">${photoEmojis}</div>` : ''}
-  </div>`;
-}
-
-function renderStars(rating) {
-  const full = Math.floor(rating);
-  const half = rating - full >= 0.5 ? 1 : 0;
-  const empty = 5 - full - half;
-  return '★'.repeat(full) + (half ? '⯨' : '') + '☆'.repeat(empty);
-}
-
-// ===================== VEHICLE SELECTION =====================
-function selectVehicle(idx, providerId) {
-  document.querySelectorAll('.vehicle-item').forEach(v => v.classList.remove('selected'));
-  document.getElementById('vehicle-' + providerId + '-' + idx).classList.add('selected');
-  selectedVehicle = idx;
-}
-
-// ===================== MAP =====================
-function updateMapPreview() {
-  const origin = document.getElementById('map-origin') ? document.getElementById('map-origin').value.trim() : '';
-  const dest = document.getElementById('map-dest') ? document.getElementById('map-dest').value.trim() : '';
-  if (origin.length > 3 && dest.length > 3) {
-    const q = encodeURIComponent(origin + ' to ' + dest + ', Paraguay');
-    const iframe = document.getElementById('map-iframe');
-    const placeholder = document.getElementById('map-placeholder');
-    const routeInfo = document.getElementById('map-route-info');
-    if (iframe) {
-      iframe.src = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU3MKo&origin=${encodeURIComponent(origin + ', Paraguay')}&destination=${encodeURIComponent(dest + ', Paraguay')}&mode=driving&language=es`;
-      iframe.style.display = 'block';
-      if (placeholder) placeholder.style.display = 'none';
-      if (routeInfo) {
-        routeInfo.style.display = 'flex';
-        document.getElementById('route-distance').textContent = '📏 Ver ruta en el mapa';
-        document.getElementById('route-time').textContent = '🗺️ Google Maps';
-      }
-    }
-  }
-}
-
-function useMyLocation(field) {
-  if (!navigator.geolocation) { alert('Tu navegador no soporta geolocalización.'); return; }
-  navigator.geolocation.getCurrentPosition(pos => {
-    const coords = pos.coords.latitude + ',' + pos.coords.longitude;
-    const input = document.getElementById(field === 'origin' ? 'map-origin' : 'map-dest');
-    if (input) {
-      input.value = 'Mi ubicacion actual (' + pos.coords.latitude.toFixed(4) + ', ' + pos.coords.longitude.toFixed(4) + ')';
-      if (field === 'origin') mapOrigin = coords;
-      else mapDest = coords;
-      updateMapPreview();
-    }
-  }, () => { alert('No se pudo obtener tu ubicacion. Asegurate de dar permiso al navegador.'); });
-}
-
-// ===================== REVIEWS =====================
-function setStars(n, providerId) {
-  selectedStars = n;
-  for (let i=1; i<=5; i++) {
-    const s = document.getElementById('star-' + providerId + '-' + i);
-    if (s) s.classList.toggle('active', i <= n);
-  }
-}
-
-function handlePhotoUpload(event, providerId) {
-  const files = Array.from(event.target.files);
-  const preview = document.getElementById('preview-photos-' + providerId);
-  files.forEach(file => {
-    const reader = new FileReader();
-    reader.onload = e => {
-      previewPhotos.push(e.target.result);
-      const item = document.createElement('div');
-      item.className = 'preview-photo-item';
-      item.innerHTML = `<img src="${e.target.result}" alt="foto"><button class="remove-photo" onclick="removePhoto(this, '${providerId}')">✕</button>`;
-      preview.appendChild(item);
-    };
-    reader.readAsDataURL(file);
-  });
-}
-
-function removePhoto(btn, providerId) {
-  btn.parentElement.remove();
-}
-
-function submitReview(providerId) {
-  const name = document.getElementById('review-name-' + providerId).value.trim();
-  const text = document.getElementById('review-text-' + providerId).value.trim();
-  if (!name || !text || selectedStars === 0) {
-    alert('Por favor completa tu nombre, comentario y seleccioná una calificacion.');
-    return;
-  }
-
-  const all = [...providers.flete, ...providers.traslado];
-  const p = all.find(x => x.id === providerId);
-  if (!p) return;
-
-  const previewDiv = document.getElementById('preview-photos-' + providerId);
-  const photoCount = previewDiv ? previewDiv.querySelectorAll('img').length : 0;
-  const photosArr = photoCount > 0 ? Array(photoCount).fill('📷') : [];
-
-  const newReview = {
-    user: name,
-    initials: name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2),
-    stars: selectedStars,
-    date: new Date().toLocaleDateString('es-PY', {month:'long', year:'numeric'}),
-    text: text,
-    photos: photosArr
+  const serviceOptions = {
+    mantenimiento: ['Plomeria - perdidas de agua / cannerias','Electricidad - instalaciones / problemas electricos','Pintura interior / exterior','Carpinteria - puertas, muebles, estructuras','Albanileria - refacciones, reparaciones','Gas - revision / instalacion','Otros / consultar'],
+    limpieza: ['Limpieza de hogar (regular)','Limpieza profunda de hogar','Limpieza de oficinas y espacios comerciales','Limpieza post-obra / post-construccion','Lavado de vehiculo a domicilio','Limpieza de tapizados y alfombras'],
+    flete: ['Mudanza de hogar','Traslado de mercaderia / bultos','Envio de electrodomesticos','Traslado de materiales de construccion','Otro tipo de carga'],
+    traslado: ['Traslado personal en vehiculo particular','Traslado corporativo','Traslado para evento o salida','Servicio de chofer por horas'],
+    preventivo: ['Diagnostico de instalaciones electricas','Diagnostico de plomeria y cannerias','Mantenimiento preventivo de aires acondicionados','Revision general del hogar (pack preventivo)','Mantenimiento para empresa / edificio'],
+    empresa: ['Limpieza corporativa mensual','Mantenimiento de instalaciones empresariales','Limpieza post-construccion (constructoras)','Servicio de fletes para empresa','Plan integral empresa (paquete completo)','Solicitar cotizacion personalizada']
   };
 
-  p.reviews.unshift(newReview);
-  p.reviewCount++;
+  let currentServiceType = '';
 
-  const reviewsList = document.getElementById('reviews-list-' + providerId);
-  if (reviewsList) {
-    reviewsList.insertAdjacentHTML('afterbegin', renderReviewItem(newReview));
-  }
+  function openModal(serviceName, serviceType) {
+    currentServiceType = serviceType;
+    document.getElementById('modalServiceName').textContent = serviceName;
 
-  // Reset form
-  document.getElementById('review-name-' + providerId).value = '';
-  document.getElementById('review-text-' + providerId).value = '';
-  if (previewDiv) previewDiv.innerHTML = '';
-  selectedStars = 0;
-  for (let i=1; i<=5; i++) {
-    const s = document.getElementById('star-' + providerId + '-' + i);
-    if (s) s.classList.remove('active');
-  }
+    const sel = document.getElementById('tipoServicio');
+    sel.innerHTML = '<option value="">Seleccioná una opcion...</option>';
+    (serviceOptions[serviceType] || []).forEach(opt => {
+      const o = document.createElement('option');
+      o.textContent = opt;
+      sel.appendChild(o);
+    });
 
-  showToast();
-}
+    document.getElementById('fleteFields').classList.toggle('visible', serviceType === 'flete');
 
-function showToast() {
-  const t = document.getElementById('toast');
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3500);
-}
-
-function contactProviderWA(providerId) {
-  const all = [...providers.flete, ...providers.traslado];
-  const p = all.find(x => x.id === providerId);
-  if (!p) return;
-  const origin = document.getElementById('map-origin') ? document.getElementById('map-origin').value.trim() : '';
-  const dest = document.getElementById('map-dest') ? document.getElementById('map-dest').value.trim() : '';
-  const vehicleIdx = selectedVehicle;
-  let msg = `*Hola! Te contacto desde ServiPro*\n\nMe interesa el servicio de *${p.name}*.\n`;
-  if (vehicleIdx !== null && vehicleIdx !== undefined && p.vehicles[vehicleIdx]) {
-    msg += `*Vehiculo seleccionado:* ${p.vehicles[vehicleIdx].name}\n`;
-  }
-  if (origin) msg += `*Origen:* ${origin}\n`;
-  if (dest) msg += `*Destino:* ${dest}\n`;
-  msg += '\n_Enviado desde ServiPro_';
-  window.open('https://wa.me/' + p.phone.replace(/\D/g,'') + '?text=' + encodeURIComponent(msg), '_blank');
-}
-
-// ===================== MODAL (otros servicios) =====================
-const serviceOptions = {
-  mantenimiento: ['Plomeria - perdidas de agua / cannerias','Electricidad - instalaciones / problemas electricos','Pintura interior / exterior','Carpinteria - puertas, muebles, estructuras','Albanileria - refacciones, reparaciones','Gas - revision / instalacion','Otros / consultar'],
-  limpieza: ['Limpieza de hogar (regular)','Limpieza profunda de hogar','Limpieza de oficinas y espacios comerciales','Limpieza post-obra / post-construccion','Lavado de vehiculo a domicilio','Limpieza de tapizados y alfombras'],
-  preventivo: ['Diagnostico de instalaciones electricas','Diagnostico de plomeria y cannerias','Mantenimiento preventivo de aires acondicionados','Revision general del hogar (pack preventivo)','Mantenimiento para empresa / edificio'],
-  empresa: ['Limpieza corporativa mensual','Mantenimiento de instalaciones empresariales','Limpieza post-construccion (constructoras)','Servicio de fletes para empresa','Plan integral empresa (paquete completo)','Solicitar cotizacion personalizada']
-};
-
-let currentModalServiceType = '';
-
-function openModal(serviceName, serviceType) {
-  if (serviceType === 'flete') { showProviders('flete'); return; }
-  if (serviceType === 'traslado') { showProviders('traslado'); return; }
-  currentModalServiceType = serviceType;
-  document.getElementById('modalServiceName').textContent = serviceName;
-  const sel = document.getElementById('tipoServicio');
-  sel.innerHTML = '<option value="">Seleccioná una opcion...</option>';
-  (serviceOptions[serviceType] || []).forEach(opt => {
-    const o = document.createElement('option'); o.textContent = opt; sel.appendChild(o);
-  });
-  switchTab('domicilio', document.getElementById('tabBtnDomicilio'));
-  document.getElementById('modalOverlay').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal() { document.getElementById('modalOverlay').classList.remove('active'); document.body.style.overflow = ''; }
-function closeModalOutside(e) { if (e.target === document.getElementById('modalOverlay')) closeModal(); }
-function switchTab(tabId, btn) {
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + tabId).classList.add('active');
-  btn.classList.add('active');
-}
-function enviarWhatsApp() {
-  const nombre = document.getElementById('nombre').value.trim();
-  const telefono = document.getElementById('telefono').value.trim();
-  const direccion = document.getElementById('direccion').value.trim();
-  const ciudad = document.getElementById('ciudad').value.trim();
-  const referencia = document.getElementById('referencia').value.trim();
-  const tipoServicio = document.getElementById('tipoServicio').value;
-  const fecha = document.getElementById('fechaServicio').value;
-  const horario = document.getElementById('horario').value;
-  const descripcion = document.getElementById('descripcion').value.trim();
-  const servicio = document.getElementById('modalServiceName').textContent;
-  if (!nombre || !telefono || !direccion) {
-    alert('Por favor completa tu nombre, telefono y domicilio antes de enviar.');
     switchTab('domicilio', document.getElementById('tabBtnDomicilio'));
-    return;
+    document.getElementById('modalOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
-  let msg = '*SOLICITUD DE SERVICIO - ServiPro*\n\n';
-  msg += '*Servicio:* ' + servicio + '\n';
-  if (tipoServicio) msg += '*Tipo especifico:* ' + tipoServicio + '\n';
-  msg += '\n*Datos del cliente*\n';
-  msg += '*Nombre:* ' + nombre + '\n';
-  msg += '*Telefono:* ' + telefono + '\n';
-  msg += '*Domicilio:* ' + direccion + '\n';
-  if (ciudad) msg += '*Ciudad/Barrio:* ' + ciudad + '\n';
-  if (referencia) msg += '*Referencia:* ' + referencia + '\n';
-  msg += '\n*Disponibilidad*\n';
-  if (fecha) msg += '*Fecha preferida:* ' + fecha + '\n';
-  if (horario) msg += '*Horario:* ' + horario + '\n';
-  if (descripcion) msg += '\n*Descripcion:* ' + descripcion + '\n';
-  msg += '\n_Enviado desde ServiPro_';
-  window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg), '_blank');
-}
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function closeModalOutside(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+
+  function switchTab(tabId, btn) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + tabId).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  function enviarWhatsApp() {
+    const nombre = document.getElementById('nombre').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const direccion = document.getElementById('direccion').value.trim();
+    const ciudad = document.getElementById('ciudad').value.trim();
+    const referencia = document.getElementById('referencia').value.trim();
+    const tipoServicio = document.getElementById('tipoServicio').value;
+    const fecha = document.getElementById('fechaServicio').value;
+    const horario = document.getElementById('horario').value;
+    const descripcion = document.getElementById('descripcion').value.trim();
+    const servicio = document.getElementById('modalServiceName').textContent;
+
+    if (!nombre || !telefono || !direccion) {
+      alert('Por favor completa tu nombre, telefono y domicilio antes de enviar.');
+      switchTab('domicilio', document.getElementById('tabBtnDomicilio'));
+      return;
+    }
+
+    let msg = '*SOLICITUD DE SERVICIO - ServiPro*\n\n';
+    msg += '*Servicio:* ' + servicio + '\n';
+    if (tipoServicio) msg += '*Tipo especifico:* ' + tipoServicio + '\n';
+    msg += '\n*Datos del cliente*\n';
+    msg += '*Nombre:* ' + nombre + '\n';
+    msg += '*Telefono:* ' + telefono + '\n';
+    msg += '*Domicilio:* ' + direccion + '\n';
+    if (ciudad) msg += '*Ciudad/Barrio:* ' + ciudad + '\n';
+    if (referencia) msg += '*Referencia:* ' + referencia + '\n';
+
+    if (currentServiceType === 'flete') {
+      const origen = document.getElementById('origenFlete').value.trim();
+      const destino = document.getElementById('destinoFlete').value.trim();
+      const tipoCarga = document.getElementById('tipoCarga').value;
+      msg += '\n*Datos del flete*\n';
+      if (origen) msg += '*Recogida de mercaderia:* ' + origen + '\n';
+      if (destino) msg += '*Destino del traslado:* ' + destino + '\n';
+      if (tipoCarga) msg += '*Tipo de carga:* ' + tipoCarga + '\n';
+    }
+
+    msg += '\n*Disponibilidad*\n';
+    if (fecha) msg += '*Fecha preferida:* ' + fecha + '\n';
+    if (horario) msg += '*Horario:* ' + horario + '\n';
+    if (descripcion) msg += '\n*Descripcion:* ' + descripcion + '\n';
+    msg += '\n_Enviado desde ServiPro_';
+
+    window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg), '_blank');
+  }
 </script>
 </body>
 </html>
+
